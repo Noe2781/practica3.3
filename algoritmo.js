@@ -1,12 +1,17 @@
 class Persona {
 
     #nombre = "def nombre";
+    #animo = 0;
     getNombre (){
         return this.#nombre
     }
 
     setNombre (nombreNuevo){
         this.#nombre = nombreNuevo
+    }
+
+    setAnimo(animo){
+        this.#animo = animo;
     }
   
     /**
@@ -14,14 +19,16 @@ class Persona {
      * @param {Persona}juan saluda a perro
      * @param {Perro} lisy es saludado 
      */
-        saludar(lisy) {
-            console.log(this.getNombre() + " saluda a " + lisy.getNombre());
+        saludar(unPerro) {
+            console.log(this.getNombre() + " saluda a " + unPerro.getNombre());
+            unPerro.devuelveSaludo(this);
           }
   }
   
   class Perro {
 
     #nombre = "def nombre";
+    #animo = 0;
     getNombre (){
         return this.#nombre
     }
@@ -29,6 +36,15 @@ class Persona {
     setNombre (nombreNuevo){
         this.#nombre = nombreNuevo
     }
+
+
+    setAnimo(animo) {
+        this.#animo = animo;
+    }
+
+    //crear devolver saludo con el animo del perro
+    
+
    
   }
 
